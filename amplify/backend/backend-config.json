@@ -1,0 +1,27 @@
+{
+	"auth": {
+		"reactamplified4838bcd2": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"customAuth": false
+		}
+	},
+	"api": {
+		"reactAmplified": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"authConfig": {
+					"defaultAuthentication": {
+						"authenticationType": "AMAZON_COGNITO_USER_POOLS",
+						"userPoolConfig": {
+							"userPoolId": "authreactamplified4838bcd2"
+						}
+					},
+					"additionalAuthenticationProviders": []
+				}
+			}
+		}
+	}
+}
